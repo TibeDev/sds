@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chemical Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card left-card">
+        <button class="add-btn" onclick="NewChemical()">
+          + Add New Chemical
+        </button>
+
+        <div class="empty-state">
+          <div class="icon warning">⚠️</div>
+          <p class="title">No chemicals added yet</p>
+        </div>
+      </div>
+
+      <div class="card right-card">
+        <div class="empty-state-form">
+          <div class="icon flask">⚗️</div>
+          <p class="title">No Chemical Selected</p>
+          <p class="subtitle">
+            Select a chemical from the list or add a new one to get started
+          </p>
+        </div>
+        <div class="form-container">
+          <div class="form-nav">
+            <p class="form-title">Add New Chemical</p>
+            <button class="cancel-form" onclick="CancelChemical()">X</button>
+          </div>
+          <form class="chemical-form" action="">
+            <div class="basic-information">
+              <div id="basic-field">
+                <p class="field-label">Chemical Name *</p>
+                <input type="text" class="field-input" name="chemical-name" />
+              </div>
+
+              <div id="basic-field">
+                <p class="field-label">CAS Number</p>
+                <input type="text" class="field-input" name="cas-number" />
+              </div>
+
+              <div id="basic-field">
+                <p class="field-label">Hazard Class *</p>
+                <select name="" class="field-input">
+                  <option value="">Select class</option>
+                  <option value="">Explosives</option>
+                  <option value="">Gases</option>
+                  <option value="">Flammable Liquids</option>
+                  <option value="">Flammable Solids</option>
+                  <option value="">Oxidizing Substances</option>
+                  <option value="">Toxic Substances</option>
+                  <option value="">Radioactive Material</option>
+                  <option value="">Corrosive Material</option>
+                  <option value="">Miscellaneous</option>
+                </select>
+              </div>
+
+              <div id="basic-field">
+                <p class="field-label">Physical State *</p>
+                <select name="" class="field-input">
+                  <option value="">Solid</option>
+                  <option value="">Liquid</option>
+                  <option value="">Gas</option>
+                  <option value="">Powder</option>
+                </select>
+              </div>
+            </div>
+            <div class="hazard-container">
+              <p class="field-label">Hazard *</p>
+              <div class="hazard-grid">
+                <div id="hazard">
+                  <input type="checkbox" />
+                  <p class="hazard-label">Explosive</p>
+                </div>
+
+                <div id="hazard">
+                  <input type="checkbox" />
+                  <p class="hazard-label">Flammable</p>
+                </div>
+
+                <div id="hazard">
+                  <input type="checkbox" />
+                  <p class="hazard-label">Oxidizing</p>
+                </div>
+
+                <div id="hazard">
+                  <input type="checkbox" />
+                  <p class="hazard-label">Compressed Gas</p>
+                </div>
+
+                <div id="hazard">
+                  <input type="checkbox" />
+                  <p class="hazard-label">Corrosive</p>
+                </div>
+
+                <div id="hazard">
+                  <input type="checkbox" />
+                  <p class="hazard-label">Acute Toxicity</p>
+                </div>
+
+                <div id="hazard">
+                  <input type="checkbox" />
+                  <p class="hazard-label">Harmful/Irritant</p>
+                </div>
+
+                <div id="hazard">
+                  <input type="checkbox" />
+                  <p class="hazard-label">Health Hazard</p>
+                </div>
+
+                <div id="hazard">
+                  <input type="checkbox" />
+                  <p class="hazard-label">Enviromental Hazard</p>
+                </div>
+              </div>
+
+              <div id="explanation-field">
+                <p class="field-label">Safety Precautions *</p>
+                <textarea
+                  name="safety-precautions"
+                  class="field-area"
+                ></textarea>
+              </div>
+
+              <div id="explanation-field">
+                <p class="field-label">Emergency Procedures *</p>
+                <textarea
+                  name="safety-precautions"
+                  class="field-area"
+                ></textarea>
+              </div>
+
+              <div id="explanation-field">
+                <p class="field-label">Storage Requirement *</p>
+                <textarea
+                  name="safety-precautions"
+                  class="field-area"
+                ></textarea>
+              </div>
+            </div>
+            <div id="phrases-container">
+              <p class="field-label">H-Phrases</p>
+              <div class="phrases-selector">
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H200 – Unstable explosive</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H201 – Explosive; mass explosion hazard</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H202 – Explosive; severe projection hazard</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H203 – Explosive; fire, blast or projection hazard</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H204 – Fire or projection hazard</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H205 – May mass explode in fire</p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H220 – Extremely flammable gas</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H221 – Flammable gas</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H222 – Extremely flammable aerosol</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H223 – Flammable aerosol</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H224 – Extremely flammable liquid and vapour</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H225 – Highly flammable liquid and vapour</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H226 – Flammable liquid and vapour</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H228 – Flammable solid</p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H240 – Heating may cause an explosion</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H241 – Heating may cause a fire or explosion</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H242 – Heating may cause a fire</p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H250 – Catches fire spontaneously if exposed to air</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H251 – Self-heating; may catch fire</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H252 – Self-heating in large quantities; may catch fire</p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>
+                    H260 – In contact with water releases flammable gases which
+                    may ignite spontaneously
+                  </p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H261 – In contact with water releases flammable gases</p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H270 – May cause or intensify fire; oxidiser</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H271 – May cause fire or explosion; strong oxidiser</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H272 – May intensify fire; oxidiser</p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H300 – Fatal if swallowed</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H301 – Toxic if swallowed</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H302 – Harmful if swallowed</p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H310 – Fatal in contact with skin</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H311 – Toxic in contact with skin</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H312 – Harmful in contact with skin</p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H330 – Fatal if inhaled</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H331 – Toxic if inhaled</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H332 – Harmful if inhaled</p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H314 – Causes severe skin burns and eye damage</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H315 – Causes skin irritation</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H317 – May cause an allergic skin reaction</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H318 – Causes serious eye damage</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H319 – Causes serious eye irritation</p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H334 – May cause allergy or asthma symptoms if inhaled</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H335 – May cause respiratory irritation</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H336 – May cause drowsiness or dizziness</p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H340 – May cause genetic defects</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H350 – May cause cancer</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H360 – May damage fertility or the unborn child</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H370 – Causes damage to organs</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>
+                    H372 – Causes damage to organs through prolonged or repeated
+                    exposure
+                  </p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>H400 – Very toxic to aquatic life</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>
+                    H410 – Very toxic to aquatic life with long lasting effects
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div id="phrases-container">
+              <p class="field-label">P-Phrases</p>
+              <div class="phrases-selector">
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>
+                    P101 – If medical advice is needed, have product container
+                    or label at hand
+                  </p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P102 – Keep out of reach of children</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P103 – Read label before use</p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P201 – Obtain special instructions before use</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>
+                    P202 – Do not handle until all safety precautions have been
+                    read and understood
+                  </p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P210 – Keep away from heat, sparks, open flames</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P233 – Keep container tightly closed</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P240 – Ground/bond container and receiving equipment</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P241 – Use explosion-proof equipment</p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P261 – Avoid breathing dust/fume/gas/mist/vapours/spray</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P264 – Wash hands thoroughly after handling</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>
+                    P270 – Do not eat, drink or smoke when using this product
+                  </p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>
+                    P280 – Wear protective gloves/protective clothing/eye
+                    protection
+                  </p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P301 – IF SWALLOWED:</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P302 – IF ON SKIN:</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P304 – IF INHALED:</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P305 – IF IN EYES:</p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P308 – IF exposed or concerned</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P310 – Immediately call a POISON CENTER or doctor</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P312 – Call a POISON CENTER if you feel unwell</p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P403 – Store in a well-ventilated place</p>
+                </div>
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>P405 – Store locked up</p>
+                </div>
+
+                <div id="phrase">
+                  <input type="checkbox" />
+                  <p>
+                    P501 – Dispose of contents/container in accordance with
+                    regulations
+                  </p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

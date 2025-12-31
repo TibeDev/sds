@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+}
+
+.container {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.left-card {
+  width: 320px;
+  padding: 24px;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 14px;
+  background: #e60000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #cc0000;
+}
+
+.right-card {
+  flex: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.empty-state,
+.empty-state-form {
+  margin-top: 40px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+  color: #c7cbd1;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 6px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #9ca3af;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.form-nav {
+  align-items: center;
+  display: flex;
+}
+.cancel-form {
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #6b7280;
+}
+.cancel-form:hover {
+  color: black;
+}
+.form-title {
+  font-weight: 500;
+  font-size: larger;
+}
+.basic-information {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+}
+#basic-field .field-label {
+  margin: 0;
+}
+.field-input {
+  width: 100%;
+}
+
+.hazard-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+}
+#hazard {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.field-area {
+  resize: none;
+  width: 100%;
+  height: 6rem;
+}
+.phrases-selector {
+  border: 1px solid #6b7280;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  height: 17rem;
+}
+#phrase {
+  display: flex;
+  padding-left: 1rem;
+}
