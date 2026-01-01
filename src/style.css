@@ -10,8 +10,9 @@ body {
 
 .container {
   display: flex;
-  gap: 24px;
-  padding: 24px;
+  gap: 1.3rem;
+  padding: 1rem;
+  align-items: flex-start;
 }
 
 .card {
@@ -21,18 +22,21 @@ body {
 }
 
 .left-card {
-  width: 320px;
-  padding: 24px;
+  width: clamp(260px, 35%, 420px);
+  min-height: 170px;
 }
-
+.add-btn-container {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem;
+}
 .add-btn {
   width: 100%;
-  padding: 14px;
+  padding: 1rem;
   background: #e60000;
   color: #fff;
   border: none;
   border-radius: 10px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
 }
@@ -42,30 +46,37 @@ body {
 }
 
 .right-card {
-  flex: 1;
+  width: 100%;
+  min-height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .empty-state,
 .empty-state-form {
-  margin-top: 40px;
   text-align: center;
   color: #6b7280;
 }
+.empty-state {
+  display: none;
+  margin-top: 2.2rem;
+}
 
 .icon {
-  font-size: 40px;
+  font-size: 2rem;
   margin-bottom: 12px;
   color: #c7cbd1;
 }
 
 .title {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   margin: 6px 0;
 }
 
 .subtitle {
-  font-size: 14px;
+  font-size: 0.8rem;
   color: #9ca3af;
   max-width: 380px;
   margin: 0 auto;
@@ -78,6 +89,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+  width: 100%;
 }
 .cancel-form {
   margin-left: auto;
@@ -113,7 +125,7 @@ select.field-input {
   grid-template-columns: auto auto auto;
   gap: 1rem;
 }
-#hazard {
+.hazard {
   display: flex;
   padding: 0;
   margin: 0;
@@ -121,7 +133,7 @@ select.field-input {
   justify-content: center;
   padding: 10px;
 }
-#hazard img {
+.hazard img {
   width: 8rem;
 }
 .field-area {
@@ -146,11 +158,11 @@ select.field-input {
   border-bottom: 1px solid #e9e9ed;
 }
 
-#hazard:hover,
+.hazard:hover,
 #phrase:hover {
   background-color: lightblue;
 }
-#hazard,
+.hazard,
 #phrase {
   transition: 0.15s;
   display: flex;
@@ -164,10 +176,10 @@ select.field-input {
   height: 100%;
   width: 100%;
 }
-#hazard input[type="checkbox"] {
+.hazard input[type="checkbox"] {
   display: none;
 }
-#hazard:has(input:checked) {
+.hazard:has(input:checked) {
   background-color: rgb(255, 242, 242);
   border: 1px solid red;
 }
@@ -177,7 +189,7 @@ select.field-input {
 
 .phrases-selector,
 .field-area,
-#hazard,
+.hazard,
 .field-input {
   border: 1px solid #e5e7eb;
   border-radius: 0.5rem;
@@ -200,4 +212,46 @@ select.field-input {
 }
 #add-chemical:hover {
   background: #cc0000;
+}
+.chemical-list {
+  width: 100%;
+}
+.chemical {
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+.chemical p {
+  text-align: left;
+}
+.chemical-title {
+  font-size: larger;
+  margin-bottom: 0px;
+}
+.chemical-cas {
+  margin-top: 0px;
+  color: rgb(119, 119, 119);
+}
+.hazard-category-list {
+  display: flex;
+  gap: 0.25rem;
+}
+.hazard-category,
+.hazard-category-extra {
+  padding: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hazard-category {
+  background-color: rgb(255, 227, 227);
+  color: rgb(215, 0, 0);
+}
+.hazard-category-extra {
+  background-color: rgb(237, 237, 237);
 }

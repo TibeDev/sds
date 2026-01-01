@@ -1,14 +1,14 @@
 {
   "hazards": [
-    "explosive.png",
-    "flammable.png",
-    "oxidizing.png",
-    "compressed_gas.png",
-    "corrosive.png",
-    "toxic.png",
-    "health_hazard.png",
-    "serious_health_hazard.png",
-    "enviroment.png"
+    { "img": "explosive.png", "Name": "Explosive" },
+    { "img": "flammable.png", "Name": "Flammable" },
+    { "img": "oxidizing.png", "Name": "Oxidizing" },
+    { "img": "compressed_gas.png", "Name": "Compressed Gas" },
+    { "img": "corrosive.png", "Name": "Corrosive" },
+    { "img": "toxic.png", "Name": "Toxic" },
+    { "img": "health_hazard.png", "Name": "Harmful" },
+    { "img": "serious_health_hazard.png", "Name": "Health Hazard" },
+    { "img": "enviroment.png", "Name": "Environment" }
   ],
 
   "hazardClasses": [
@@ -31,6 +31,7 @@
     { "code": "H201", "text": "Explosive; mass explosion hazard" },
     { "code": "H202", "text": "Explosive; severe projection hazard" },
     { "code": "H220", "text": "Extremely flammable gas" },
+    { "code": "H225", "text": "Highly flammable liquid and vapour" },
     { "code": "H225", "text": "Highly flammable liquid and vapour" }
   ],
 

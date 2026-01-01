@@ -8,19 +8,20 @@
   <body>
     <div class="container">
       <div class="card left-card">
-        <button class="add-btn" onclick="NewChemical()">
-          + Add New Chemical
-        </button>
+        <div class="add-btn-container">
+          <button class="add-btn" onclick="NewChemical()">
+            Create New Chemical
+          </button>
+        </div>
 
         <div class="empty-state">
-          <div class="icon warning">⚠️</div>
           <p class="title">No chemicals added yet</p>
         </div>
+        <div class="chemical-list"></div>
       </div>
 
       <div class="card right-card">
         <div class="empty-state-form">
-          <div class="icon flask">⚗️</div>
           <p class="title">No Chemical Selected</p>
           <p class="subtitle">
             Select a chemical from the list or add a new one to get started
@@ -47,18 +48,18 @@
               <div class="basic-field">
                 <p class="field-label">Hazard Class *</p>
                 <select
-                  name=""
-                  class="field-input"
                   id="select-hazard-classes"
+                  name="hazard-classes"
+                  class="field-input"
                 ></select>
               </div>
 
               <div class="basic-field">
                 <p class="field-label">Physical State *</p>
                 <select
-                  name=""
-                  class="field-input"
                   id="select-phyiscal-states"
+                  name="physical-states"
+                  class="field-input"
                 ></select>
               </div>
             </div>
@@ -103,7 +104,12 @@
               <input type="file" />
             </div>
             <div class="bottemNav">
-              <input type="button" id="add-chemical" value="Add Chemical" />
+              <input
+                type="button"
+                id="add-chemical"
+                value="Add Chemical"
+                onclick="AddChemical()"
+              />
               <input
                 type="button"
                 id="cancel-form"

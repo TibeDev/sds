@@ -30,9 +30,9 @@ function LoadHazards(hazards) {
     container.insertAdjacentHTML(
       "beforeend",
       `
-    <label id="hazard">
+    <label class="hazard" id="${hazard.Name}">
       <input type="checkbox" />
-      <img src="${path}${hazard}" />
+      <img src="${path}${hazard.img}"/>
     </label>
     `
     );
@@ -64,4 +64,57 @@ function LoadPhrases(containerId, phrases) {
     `
     );
   });
+}
+
+function AddChemical() {
+  let countOfIcons = 0;
+
+  const chemicalName = document.getElementsByName("chemical-name")[0];
+  const casNumber = document.getElementsByName("cas-number")[0];
+  const hazardIcons = document.querySelectorAll(".hazard");
+
+  const hazardClasses = document.getElementsByName("hazard-classes")[0];
+  const physicalStates = document.getElementsByName("physical-states")[0];
+
+  const chemicalList = document.querySelector(".chemical-list");
+
+  let selectedHazardIcons = "";
+  hazardIcons.forEach((icon) => {
+    const input = icon.querySelector("input");
+    if (input.checked) {
+      if (countOfIcons < 2) {
+        selectedHazardIcons += `<div class="hazard-category">${icon.id}</div>`;
+      }
+      countOfIcons++;
+    }
+  });
+  if (countOfIcons > 2) {
+    selectedHazardIcons += `<div class="hazard-category-extra">+${
+      countOfIcons - 2
+    } more</div>`;
+  }
+  chemicalList.insertAdjacentHTML(
+    "beforeend",
+    `
+      <button class="chemical">
+              <p class="chemical-title">${chemicalName.value}</p>
+              <p class="chemical-cas">CAS: ${casNumber.value}</p>
+              <div class="hazard-category-list">
+                ${selectedHazardIcons}
+              </div>
+      </button>
+    `
+  );
+  CancelChemical();
+}
+
+function CreateChemical() {
+  const chemicalName = document.getElementsByName("chemical-name")[0];
+  const casNumber = document.getElementsByName("cas-number")[0];
+  const hazardIcons = document.querySelectorAll(".hazard");
+
+  const hazardClasses = document.getElementsByName("hazard-classes")[0];
+  const physicalStates = document.getElementsByName("physical-states")[0];
+
+  chemicalName.value = false;
 }
