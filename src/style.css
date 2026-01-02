@@ -1,3 +1,6 @@
+/* ============================= */
+/*        Global Styles          */
+/* ============================= */
 * {
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -8,13 +11,20 @@ body {
   background: #ffffff;
 }
 
+/* ============================= */
+/*           Layout              */
+/* ============================= */
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 30% 70%;
   gap: 1.3rem;
   padding: 1rem;
   align-items: flex-start;
 }
 
+/* ============================= */
+/*           Cards               */
+/* ============================= */
 .card {
   background: #fff;
   border: 1px solid #e5e7eb;
@@ -22,13 +32,24 @@ body {
 }
 
 .left-card {
-  width: clamp(260px, 35%, 420px);
   min-height: 170px;
 }
+
+.right-card {
+  min-height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================= */
+/*          Buttons              */
+/* ============================= */
 .add-btn-container {
   border-bottom: 1px solid #e5e7eb;
   padding: 1rem;
 }
+
 .add-btn {
   width: 100%;
   padding: 1rem;
@@ -45,21 +66,34 @@ body {
   background: #cc0000;
 }
 
-.right-card {
-  width: 100%;
-  min-height: 170px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#add-chemical {
+  background-color: #e7000b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
+#add-chemical:hover {
+  background: #cc0000;
+}
+
+#cancel-form {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ============================= */
+/*          Empty States         */
+/* ============================= */
 .empty-state,
 .empty-state-form {
   text-align: center;
   color: #6b7280;
 }
+
 .empty-state {
-  display: none;
   margin-top: 2.2rem;
 }
 
@@ -81,16 +115,22 @@ body {
   max-width: 380px;
   margin: 0 auto;
 }
-.form-nav {
-  align-items: center;
-  display: flex;
-}
+
+/* ============================= */
+/*        Form Container         */
+/* ============================= */
 .form-container {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
   width: 100%;
 }
+
+.form-nav {
+  align-items: center;
+  display: flex;
+}
+
 .cancel-form {
   margin-left: auto;
   background-color: transparent;
@@ -98,95 +138,118 @@ body {
   font-size: 1.5rem;
   color: #6b7280;
 }
+
 .cancel-form:hover {
   color: black;
 }
+
 .form-title {
   font-weight: 500;
   font-size: larger;
 }
+
 .basic-information {
   display: grid;
   grid-template-columns: auto auto;
   gap: 1rem;
 }
+
 .basic-field .field-label {
   margin: 0;
 }
+
 .field-input {
   height: 2rem;
   width: 100%;
 }
+
 select.field-input {
   background-color: #e9e9ed;
 }
+
+.field-area {
+  resize: none;
+  width: 100%;
+  height: 6rem;
+  padding: 0.5rem;
+}
+
+/* ============================= */
+/*           Hazards             */
+/* ============================= */
 .hazard-grid {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 1rem;
 }
+
 .hazard {
   display: flex;
-  padding: 0;
+  padding: 10px;
   margin: 0;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  transition: 0.15s;
+  cursor: pointer;
 }
+
 .hazard img {
   width: 8rem;
 }
-.field-area {
-  resize: none;
-  width: 100%;
-  height: 6rem;
+
+.hazard:hover {
+  background-color: lightblue;
 }
+
+.hazard-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.hazard input[type="checkbox"] {
+  display: none;
+}
+
+.hazard:has(input:checked) {
+  background-color: rgb(255, 242, 242);
+  border: 1px solid red;
+}
+
+/* ============================= */
+/*         Phrases Selector      */
+/* ============================= */
 .phrases-selector {
   border: 1px solid #6b7280;
   scroll-behavior: smooth;
   overflow-y: scroll;
   height: 17rem;
 }
+
 #phrase {
   display: flex;
   padding-left: 1rem;
+  transition: 0.15s;
+  align-items: center;
 }
+
+#phrase:hover {
+  background-color: lightblue;
+}
+
 #phrase p {
   margin-left: 0.5rem;
 }
+
 .phrases-selector label:not(:last-child) {
   border-bottom: 1px solid #e9e9ed;
 }
 
-.hazard:hover,
-#phrase:hover {
-  background-color: lightblue;
-}
-.hazard,
-#phrase {
-  transition: 0.15s;
-  display: flex;
-  align-items: center;
-}
-.hazard-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 100%;
-  width: 100%;
-}
-.hazard input[type="checkbox"] {
-  display: none;
-}
-.hazard:has(input:checked) {
-  background-color: rgb(255, 242, 242);
-  border: 1px solid red;
-}
-.field-area {
-  padding: 0.5rem;
-}
-
+/* ============================= */
+/*        Field & Form Inputs    */
+/* ============================= */
 .phrases-selector,
 .field-area,
 .hazard,
@@ -194,6 +257,10 @@ select.field-input {
   border: 1px solid #e5e7eb;
   border-radius: 0.5rem;
 }
+
+/* ============================= */
+/*          Bottom Nav           */
+/* ============================= */
 .bottemNav {
   margin-top: 20px;
   display: grid;
@@ -201,43 +268,85 @@ select.field-input {
   gap: 0.7rem;
   height: 2rem;
 }
-#add-chemical {
-  background-color: #e7000b;
-  color: white;
-}
-#add-chemical,
-#cancel-form {
-  border: none;
-  border-radius: 10px;
-}
-#add-chemical:hover {
-  background: #cc0000;
-}
+
+/* ============================= */
+/*         Chemical List         */
+/* ============================= */
 .chemical-list {
+  overflow: auto;
   width: 100%;
 }
+
 .chemical {
   background-color: transparent;
   width: 100%;
   border: none;
   padding: 1rem;
   border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: row;
+  transition: 0.15s;
 }
+
+.chemical:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.chemical-info {
+  width: 80%;
+}
+
+.chemical-buttons {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  gap: 0.5rem;
+  justify-content: right;
+}
+
+.chemical-button {
+  display: none;
+}
+
+.chemical button {
+  border: none;
+  background-color: transparent;
+  width: 2rem;
+  height: 2rem;
+}
+
+.chemical button img {
+  width: 100%;
+  filter: brightness(0);
+  transition: 0.15s;
+}
+
+.chemical button:hover img {
+  filter: brightness(0.25);
+}
+
 .chemical p {
   text-align: left;
 }
+
 .chemical-title {
   font-size: larger;
   margin-bottom: 0px;
 }
+
 .chemical-cas {
   margin-top: 0px;
   color: rgb(119, 119, 119);
 }
+
+/* ============================= */
+/*      Hazard Categories        */
+/* ============================= */
 .hazard-category-list {
   display: flex;
   gap: 0.25rem;
 }
+
 .hazard-category,
 .hazard-category-extra {
   padding: 0.3rem;
@@ -248,10 +357,71 @@ select.field-input {
   align-items: center;
   justify-content: center;
 }
+
 .hazard-category {
   background-color: rgb(255, 227, 227);
   color: rgb(215, 0, 0);
 }
+
 .hazard-category-extra {
   background-color: rgb(237, 237, 237);
+}
+/* ============================= */
+/*            Overlay            */
+/* ============================= */
+
+.overlay-container {
+  position: fixed;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ============================= */
+/*        Confirm Prompt         */
+/* ============================= */
+
+.confirm-container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.549);
+}
+.confirm-prompt {
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 25rem;
+}
+.prompt-question {
+  margin-bottom: 2rem;
+}
+.confirm-buttons {
+  display: flex;
+  justify-content: right;
+  gap: 0.5rem;
+}
+.confirm-buttons button {
+  width: 5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+#confirm-yes-btn {
+  background: #e60000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+#confirm-no-btn {
+  border: 2px solid #e60000;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+button {
+  cursor: pointer;
 }

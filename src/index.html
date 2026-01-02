@@ -6,6 +6,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="overlay-container">
+      <div class="confirm-container">
+        <div class="confirm-prompt">
+          <p class="prompt-question"></p>
+          <div class="confirm-buttons">
+            <button id="confirm-yes-btn">Yes</button>
+            <button id="confirm-no-btn">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="card left-card">
         <div class="add-btn-container">
@@ -37,12 +48,22 @@
             <div class="basic-information">
               <div class="basic-field">
                 <p class="field-label">Chemical Name *</p>
-                <input type="text" class="field-input" name="chemical-name" />
+                <input
+                  type="text"
+                  class="field-input"
+                  name="chemical-name"
+                  required
+                />
               </div>
 
               <div class="basic-field">
                 <p class="field-label">CAS Number</p>
-                <input type="text" class="field-input" name="cas-number" />
+                <input
+                  type="text"
+                  class="field-input"
+                  name="cas-number"
+                  required
+                />
               </div>
 
               <div class="basic-field">
@@ -76,12 +97,18 @@
 
             <div class="explanation-field">
               <p class="field-label">Emergency Procedures *</p>
-              <textarea name="safety-precautions" class="field-area"></textarea>
+              <textarea
+                name="emergency-procedures"
+                class="field-area"
+              ></textarea>
             </div>
 
             <div class="explanation-field">
               <p class="field-label">Storage Requirement *</p>
-              <textarea name="safety-precautions" class="field-area"></textarea>
+              <textarea
+                name="storage-requirement"
+                class="field-area"
+              ></textarea>
             </div>
 
             <div class="phrases-container">
@@ -105,7 +132,7 @@
             </div>
             <div class="bottemNav">
               <input
-                type="button"
+                type="submit"
                 id="add-chemical"
                 value="Add Chemical"
                 onclick="AddChemical()"
