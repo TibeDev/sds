@@ -72,6 +72,7 @@
                   id="select-hazard-classes"
                   name="hazard-classes"
                   class="field-input"
+                  required
                 ></select>
               </div>
 
@@ -81,6 +82,7 @@
                   id="select-phyiscal-states"
                   name="physical-states"
                   class="field-input"
+                  required
                 ></select>
               </div>
             </div>
@@ -92,7 +94,11 @@
 
             <div class="explanation-field">
               <p class="field-label">Safety Precautions *</p>
-              <textarea name="safety-precautions" class="field-area"></textarea>
+              <textarea
+                name="safety-precautions"
+                class="field-area"
+                required
+              ></textarea>
             </div>
 
             <div class="explanation-field">
@@ -100,6 +106,7 @@
               <textarea
                 name="emergency-procedures"
                 class="field-area"
+                required
               ></textarea>
             </div>
 
@@ -108,6 +115,7 @@
               <textarea
                 name="storage-requirement"
                 class="field-area"
+                required
               ></textarea>
             </div>
 
@@ -131,18 +139,12 @@
               <input type="file" />
             </div>
             <div class="bottemNav">
-              <input
-                type="submit"
-                id="add-chemical"
-                value="Add Chemical"
-                onclick="AddChemical()"
-              />
-              <input
-                type="button"
-                id="cancel-form"
-                value="Cancel"
-                onclick="CancelChemical()"
-              />
+              <button type="submit" id="add-chemical" onclick="AddChemical()">
+                Add Chemical
+              </button>
+              <button type="button" id="cancel-form" onclick="CancelChemical()">
+                Cancel
+              </button>
             </div>
           </form>
         </div>

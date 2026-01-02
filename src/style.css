@@ -16,7 +16,7 @@ body {
 /* ============================= */
 .container {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 30% auto;
   gap: 1.3rem;
   padding: 1rem;
   align-items: flex-start;
@@ -28,15 +28,11 @@ body {
 .card {
   background: #fff;
   border: 1px solid #e5e7eb;
+  min-height: 170px;
   border-radius: 12px;
 }
 
-.left-card {
-  min-height: 170px;
-}
-
 .right-card {
-  min-height: 170px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +55,6 @@ body {
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;
-  cursor: pointer;
 }
 
 .add-btn:hover {
@@ -71,7 +66,6 @@ body {
   color: white;
   border: none;
   border-radius: 10px;
-  cursor: pointer;
 }
 
 #add-chemical:hover {
@@ -81,7 +75,6 @@ body {
 #cancel-form {
   border: none;
   border-radius: 10px;
-  cursor: pointer;
 }
 
 /* ============================= */
@@ -94,9 +87,9 @@ body {
 }
 
 .empty-state {
+  display: block;
   margin-top: 2.2rem;
 }
-
 .icon {
   font-size: 2rem;
   margin-bottom: 12px;
@@ -124,6 +117,7 @@ body {
   padding-right: 20px;
   padding-bottom: 20px;
   width: 100%;
+  display: none;
 }
 
 .form-nav {
@@ -190,7 +184,6 @@ select.field-input {
   align-items: center;
   justify-content: center;
   transition: 0.15s;
-  cursor: pointer;
 }
 
 .hazard img {
@@ -282,24 +275,26 @@ select.field-input {
   width: 100%;
   border: none;
   padding: 1rem;
-  border-bottom: 1px solid #e5e7eb;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   transition: 0.15s;
 }
-
+.chemical:not(:last-child) {
+  border-bottom: 1px solid #e5e7eb;
+}
 .chemical:hover {
   background-color: rgb(240, 240, 240);
 }
 
 .chemical-info {
-  width: 80%;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
 }
 
 .chemical-buttons {
   display: flex;
   flex-direction: row;
-  width: 20%;
   gap: 0.5rem;
   justify-content: right;
 }
@@ -408,7 +403,6 @@ select.field-input {
 .confirm-buttons button {
   width: 5rem;
   height: 2.5rem;
-  cursor: pointer;
 }
 #confirm-yes-btn {
   background: #e60000;
@@ -422,6 +416,19 @@ select.field-input {
   color: black;
   border-radius: 10px;
 }
-button {
+button,
+select,
+label,
+input[type="checkbox"],
+input[type="file"] {
   cursor: pointer;
+}
+@media (max-width: 1100px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 0.65rem;
+    align-items: flex-start;
+  }
 }

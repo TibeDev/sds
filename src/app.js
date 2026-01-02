@@ -7,10 +7,6 @@ const chemicalForm = document.querySelector(".form-container");
 const chemicalList = document.querySelector(".chemical-list");
 const emptyStateChemicalList = document.querySelector(".empty-state");
 
-// Initially show form and hide empty state
-emptyState.style.display = "none";
-chemicalForm.style.display = "block";
-
 /* ============================= */
 /*       Form Toggle Functions   */
 /* ============================= */
@@ -102,6 +98,7 @@ function AddChemical() {
   if (!form.checkValidity()) {
     return false;
   }
+  event.preventDefault();
   const chemicalName = document.getElementsByName("chemical-name")[0];
   const casNumber = document.getElementsByName("cas-number")[0];
   const hazardIcons = document.querySelectorAll(".hazard");
@@ -128,20 +125,23 @@ function AddChemical() {
 
   const chemicalEl = document.createElement("label");
   chemicalEl.className = "chemical";
-  chemicalEl.innerHTML = `<input type="button" class="chemical-button"/>
-      <div class="chemical-info">
-        <p class="chemical-title">${chemicalName.value}</p>
-        <p class="chemical-cas">CAS: ${casNumber.value}</p>
-        <div class="hazard-category-list">${selectedHazardIcons}</div>
+  chemicalEl.innerHTML = `
+    <input type="button" class="chemical-button" />
+    <div class="chemical-info">
+      <div>
+      <p class="chemical-title">${chemicalName.value}</p>
+      <p class="chemical-cas">CAS: ${casNumber.value}</p>
       </div>
       <div class="chemical-buttons">
         <button class="chemical-edit-btn">
           <img src="../images/Icons/pencil.svg" alt="" />
         </button>
         <button class="chemical-delete-btn" id="${chemicalName.value}-bin">
-          <img src="../images/Icons/bin.svg" alt=""/>
+          <img src="../images/Icons/bin.svg" alt="" />
         </button>
       </div>
+    </div>
+    <div class="hazard-category-list">${selectedHazardIcons}</div>
     `;
   chemicalList.appendChild(chemicalEl);
   const deleteBtn = chemicalEl.querySelector(".chemical-delete-btn");
