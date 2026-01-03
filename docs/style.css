@@ -240,7 +240,12 @@ select.field-input {
   width: 100%;
   margin-left: 0.5rem;
 }
-
+.multi-select-selected-items {
+  margin: 0;
+  margin-top: 0.5rem;
+  color: #9ca3af;
+  font-size: 0.8rem;
+}
 .mutli-select-list label:not(:last-child) {
   border-bottom: 1px solid #e9e9ed;
 }

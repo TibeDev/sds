@@ -20,7 +20,7 @@
     <div class="container">
       <div class="card left-card">
         <div class="add-btn-container">
-          <button class="add-btn">Nieuwe SDS</button>
+          <button class="add-btn" onclick="NewChemical()">Nieuwe SDS</button>
         </div>
 
         <div class="empty-state">
@@ -40,12 +40,13 @@
         <div class="form-container">
           <div class="form-nav">
             <p class="form-title">Nieuwe SDS</p>
-            <button class="cancel-form">X</button>
+            <button class="cancel-form" onclick="CancelChemical()">X</button>
           </div>
           <form class="chemical-form" action=""></form>
         </div>
       </div>
     </div>
     <script src="formBuilder.js"></script>
+    <script src="formManager.js"></script>
   </body>
 </html>
