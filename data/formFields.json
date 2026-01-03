@@ -1,0 +1,201 @@
+{
+  "fields": [
+    {
+      "id": "collection-name",
+      "label": "Verzamelnaam",
+      "type": "input",
+      "input": "text",
+      "placeholder": "bv: Aceton, PUR-schuim, Silicone, etc...",
+      "required": true
+    },
+    {
+      "id": "commercial-name",
+      "label": "Commerciele Naam",
+      "type": "input",
+      "input": "text",
+      "placeholder": "Merknaam (bv: Sprite, Fanta, Nespresso, etc...)",
+      "required": true
+    },
+    {
+      "id": "category",
+      "label": "Categorie",
+      "type": "select",
+      "required": true
+    },
+    {
+      "id": "manufacturer",
+      "label": "Producent",
+      "type": "select",
+      "required": true
+    },
+    {
+      "id": "owner",
+      "label": "Eigenaar",
+      "type": "select",
+      "required": true
+    },
+    {
+      "id": "content-per-item",
+      "label": "Inhoud per item",
+      "type": "input",
+      "input": "text",
+      "placeholder": "Volume per spuitbus, container, fles,etc...?(bv: 2liter, 1kg, etc...)",
+      "required": true
+    },
+    {
+      "id": "amount",
+      "label": "Aantal",
+      "type": "input",
+      "input": "text",
+      "placeholder": "Aantal aanwezig op moment van inventarisatie",
+      "required": true
+    },
+    {
+      "id": "max-amount",
+      "label": "Max. aantal",
+      "type": "input",
+      "input": "text",
+      "required": true
+    },
+    {
+      "id": "ghs-symbols",
+      "label": "GHS-Symbolen",
+      "type": "multi-select",
+      "select": "grid",
+      "collumn": "auto auto auto",
+      "selectedBgColor": "rgb(255, 242, 242)",
+      "selectedBorderColor": "red",
+      "required": true
+    },
+    {
+      "id": "pbms",
+      "label": "PBM's",
+      "type": "multi-select",
+      "select": "grid",
+      "collumn": "auto auto auto",
+      "selectedBgColor": "rgb(242, 245, 255)",
+      "selectedBorderColor": "rgb(22, 54, 135)",
+      "required": true
+    },
+    {
+      "id": "pbm-norms",
+      "label": "PBM-Normen",
+      "type": "multi-select",
+      "selectedBgColor": "rgb(242, 245, 255)",
+      "selectedBorderColor": "rgb(22, 54, 135)",
+      "select": "list",
+      "required": true
+    },
+    {
+      "id": "h-phrases",
+      "label": "H-zinnen",
+      "type": "multi-select",
+      "select": "list",
+      "required": true
+    },
+    {
+      "id": "p-phrases",
+      "label": "P-zinnen",
+      "type": "multi-select",
+      "select": "list",
+      "required": true
+    },
+    {
+      "id": "extinguishing-media",
+      "label": "Blusmiddel",
+      "type": "multi-select",
+      "select": "list",
+      "required": true
+    },
+    {
+      "id": "physical-properties",
+      "label": "Materiele Eigenschappen",
+      "type": "select",
+      "required": true
+    },
+    {
+      "id": "health-properties",
+      "label": "Gezondheids Eigenschappen",
+      "type": "select",
+      "required": true
+    },
+    {
+      "id": "cas-number",
+      "label": "CAS-nr",
+      "type": "input",
+      "input": "text",
+      "required": true
+    },
+    {
+      "id": "datum-sds",
+      "label": "Datum SDS",
+      "type": "input",
+      "input": "date",
+      "required": true
+    },
+    {
+      "id": "safety-precautions",
+      "label": "Hanteren & opslag",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "id": "leak-instructions",
+      "label": "Lekinstructies",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "id": "ehbo-inhalation",
+      "label": "EHBO Inademing",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "id": "ehbo-skin",
+      "label": "EHBO Huid",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "id": "ehbo-eyes",
+      "label": "EHBO Ogen",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "id": "ehbo-ingestion",
+      "label": "EHBO inslikken",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "id": "extra-info",
+      "label": "Extra info",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "id": "title",
+      "label": "Titel",
+      "type": "input",
+      "input": "text",
+      "placeholder": "bv: Aceton, PUR-schuim, Silicone, etc...",
+      "required": true
+    },
+    {
+      "id": "product-photo",
+      "label": "Foto Product",
+      "type": "input",
+      "input": "file",
+      "required": true
+    },
+    {
+      "id": "attachments",
+      "label": "Bijlagen",
+      "type": "input",
+      "input": "file",
+      "required": true
+    }
+  ]
+}

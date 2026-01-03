@@ -20,136 +20,32 @@
     <div class="container">
       <div class="card left-card">
         <div class="add-btn-container">
-          <button class="add-btn" onclick="NewChemical()">
-            Create New Chemical
-          </button>
+          <button class="add-btn">Nieuwe SDS</button>
         </div>
 
         <div class="empty-state">
-          <p class="title">No chemicals added yet</p>
+          <p class="title">Nog geen SDS's</p>
         </div>
         <div class="chemical-list"></div>
       </div>
 
       <div class="card right-card">
         <div class="empty-state-form">
-          <p class="title">No Chemical Selected</p>
+          <p class="title">Geen SDS geselecteerd</p>
           <p class="subtitle">
-            Select a chemical from the list or add a new one to get started
+            Selecteer een chemicaal van de lijst of creeer een nieuwe
           </p>
         </div>
 
         <div class="form-container">
           <div class="form-nav">
-            <p class="form-title">Add New Chemical</p>
-            <button class="cancel-form" onclick="CancelChemical()">X</button>
+            <p class="form-title">Nieuwe SDS</p>
+            <button class="cancel-form">X</button>
           </div>
-          <form class="chemical-form" action="">
-            <div class="basic-information">
-              <div class="basic-field">
-                <p class="field-label">Chemical Name *</p>
-                <input
-                  type="text"
-                  class="field-input"
-                  name="chemical-name"
-                  required
-                />
-              </div>
-
-              <div class="basic-field">
-                <p class="field-label">CAS Number</p>
-                <input
-                  type="text"
-                  class="field-input"
-                  name="cas-number"
-                  required
-                />
-              </div>
-
-              <div class="basic-field">
-                <p class="field-label">Hazard Class *</p>
-                <select
-                  id="select-hazard-classes"
-                  name="hazard-classes"
-                  class="field-input"
-                  required
-                ></select>
-              </div>
-
-              <div class="basic-field">
-                <p class="field-label">Physical State *</p>
-                <select
-                  id="select-phyiscal-states"
-                  name="physical-states"
-                  class="field-input"
-                  required
-                ></select>
-              </div>
-            </div>
-
-            <div class="hazard-container">
-              <p class="field-label">Hazard *</p>
-              <div class="hazard-grid"></div>
-            </div>
-
-            <div class="explanation-field">
-              <p class="field-label">Safety Precautions *</p>
-              <textarea
-                name="safety-precautions"
-                class="field-area"
-                required
-              ></textarea>
-            </div>
-
-            <div class="explanation-field">
-              <p class="field-label">Emergency Procedures *</p>
-              <textarea
-                name="emergency-procedures"
-                class="field-area"
-                required
-              ></textarea>
-            </div>
-
-            <div class="explanation-field">
-              <p class="field-label">Storage Requirement *</p>
-              <textarea
-                name="storage-requirement"
-                class="field-area"
-                required
-              ></textarea>
-            </div>
-
-            <div class="phrases-container">
-              <p class="field-label">H-Phrases</p>
-              <div class="phrases-selector" id="h-phrases"></div>
-            </div>
-
-            <div class="phrases-container">
-              <p class="field-label">P-Phrases</p>
-              <div class="phrases-selector" id="p-phrases"></div>
-            </div>
-
-            <div class="upload-container">
-              <p>SDS Document</p>
-              <input type="file" />
-            </div>
-
-            <div class="upload-container">
-              <p>SDS Document</p>
-              <input type="file" />
-            </div>
-            <div class="bottemNav">
-              <button type="submit" id="add-chemical" onclick="AddChemical()">
-                Add Chemical
-              </button>
-              <button type="button" id="cancel-form" onclick="CancelChemical()">
-                Cancel
-              </button>
-            </div>
-          </form>
+          <form class="chemical-form" action=""></form>
         </div>
       </div>
     </div>
-    <script src="app.js"></script>
+    <script src="formBuilder.js"></script>
   </body>
 </html>

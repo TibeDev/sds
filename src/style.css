@@ -85,7 +85,9 @@ body {
   text-align: center;
   color: #6b7280;
 }
-
+.empty-state-form {
+  display: none;
+}
 .empty-state {
   display: block;
   margin-top: 2.2rem;
@@ -117,7 +119,6 @@ body {
   padding-right: 20px;
   padding-bottom: 20px;
   width: 100%;
-  display: none;
 }
 
 .form-nav {
@@ -171,26 +172,31 @@ select.field-input {
 /* ============================= */
 /*           Hazards             */
 /* ============================= */
-.hazard-grid {
+.mutli-select-grid {
   display: grid;
-  grid-template-columns: auto auto auto;
   gap: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.hazard {
+.multi-select-icon {
+  box-sizing: border-box;
   display: flex;
   padding: 10px;
   margin: 0;
   align-items: center;
   justify-content: center;
   transition: 0.15s;
+  border-radius: 10px;
+  border: 1px solid transparent;
 }
 
-.hazard img {
+.multi-select-icon img {
   width: 8rem;
 }
 
-.hazard:hover {
+.multi-select-icon:hover {
   background-color: lightblue;
 }
 
@@ -202,48 +208,47 @@ select.field-input {
   width: 100%;
 }
 
-.hazard input[type="checkbox"] {
+.multi-select-icon input[type="checkbox"] {
   display: none;
-}
-
-.hazard:has(input:checked) {
-  background-color: rgb(255, 242, 242);
-  border: 1px solid red;
 }
 
 /* ============================= */
 /*         Phrases Selector      */
 /* ============================= */
-.phrases-selector {
+.mutli-select-list {
   border: 1px solid #6b7280;
   scroll-behavior: smooth;
   overflow-y: scroll;
-  height: 17rem;
+  overflow-x: hidden;
+  height: 25rem;
 }
 
-#phrase {
-  display: flex;
+.multi-select-list-item {
+  display: grid;
   padding-left: 1rem;
   transition: 0.15s;
   align-items: center;
 }
-
-#phrase:hover {
+.multi-select-list-item input {
+  display: none;
+}
+.multi-select-list-item:hover {
   background-color: lightblue;
 }
 
-#phrase p {
+.multi-select-list-item p {
+  width: 100%;
   margin-left: 0.5rem;
 }
 
-.phrases-selector label:not(:last-child) {
+.mutli-select-list label:not(:last-child) {
   border-bottom: 1px solid #e9e9ed;
 }
 
 /* ============================= */
 /*        Field & Form Inputs    */
 /* ============================= */
-.phrases-selector,
+.mutli-select-list,
 .field-area,
 .hazard,
 .field-input {
@@ -428,7 +433,7 @@ input[type="file"] {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    padding: 0.65rem;
+    padding: 0.65GHrem;
     align-items: flex-start;
   }
 }
