@@ -48,70 +48,66 @@
   ],
   "ghs-symbols-color": [
     {
-      "bgColor": "rgb(255, 242, 242)",
+      "bgColor": "rgb(255, 223, 223)",
       "borderColor": "red",
       "items": "all"
     }
   ],
   "pbms-symbols": [
     {
-      "img": "oogbescherming.png",
-      "name": "Oogbescherming",
+      "img": "beschermende_werkkleding.png",
+      "name": "Beschermende Werkkleding",
       "code": "PBM01"
-    },
-    {
-      "img": "gehoorbescherming.png",
-      "name": "Gehoorbescherming",
-      "code": "PBM02"
-    },
-    {
-      "img": "adembescherming.png",
-      "name": "Adembescherming",
-      "code": "PBM03"
-    },
-    {
-      "img": "mondmasker.png",
-      "name": "Mondmasker",
-      "code": "PBM04"
-    },
-    {
-      "img": "helm.png",
-      "name": "Helm",
-      "code": "PBM05"
-    },
-    {
-      "img": "gelaatsbescherming.png",
-      "name": "Gelaatsbescherming",
-      "code": "PBM06"
     },
     {
       "img": "veiligheidshandschoenen.png",
       "name": "Veiligheidshandschoenen",
+      "code": "PBM02"
+    },
+    {
+      "img": "oogbescherming.png",
+      "name": "Oogbescherming",
+      "code": "PBM03"
+    },
+    {
+      "img": "gelaatsbescherming.png",
+      "name": "Gelaatsbescherming",
+      "code": "PBM04"
+    },
+    {
+      "img": "mondmasker.png",
+      "name": "Mondmasker",
+      "code": "PBM05"
+    },
+    {
+      "img": "adembescherming.png",
+      "name": "Adembescherming",
+      "code": "PBM06"
+    },
+    {
+      "img": "handen_wassen.png",
+      "name": "Handen Wassen",
       "code": "PBM07"
-    },
-    {
-      "img": "veiligheidsschoenen.png",
-      "name": "Veiligheidsschoenen",
-      "code": "PBM08"
-    },
-    {
-      "img": "beschermende_werkkleding.png",
-      "name": "Beschermende Werkkleding",
-      "code": "PBM09"
     }
   ],
   "pbms-symbols-color": [
     {
-      "bgColor": "rgb(242, 245, 255)",
+      "bgColor": "rgb(212, 222, 255)",
       "borderColor": "rgb(22, 54, 135)",
       "items": "all"
     }
   ],
-  "h-phrases": [
+  "h-phrases-physical-hazards": [
     { "code": "H200", "text": "Instabiele ontplofbare stof." },
     { "code": "H201", "text": "Ontplofbare stof: gevaar voor massa-explosie." },
-    { "code": "H202", "text": "Ontplofbare stof: ernstig gevaar voor scherfwerking." },
-    { "code": "H203", "text": "Ontplofbare stof: gevaar voor brand, luchtdrukwerking of scherfwerking." },
+    {
+      "code": "H202",
+      "text": "Ontplofbare stof: ernstig gevaar voor scherfwerking."
+    },
+    {
+      "code": "H203",
+      "text": "Ontplofbare stof: gevaar voor brand, luchtdrukwerking of scherfwerking."
+    },
     { "code": "H204", "text": "Gevaar voor brand of scherfwerking." },
     { "code": "H205", "text": "Gevaar voor massa-explosie bij brand." },
     { "code": "H207", "text": "Kan brand veroorzaken of brand bevorderen." },
@@ -124,27 +120,65 @@
     { "code": "H226", "text": "Ontvlambare vloeistof en damp." },
     { "code": "H227", "text": "Brandbare vloeistof." },
     { "code": "H228", "text": "Ontvlambare vaste stof." },
-    { "code": "H229", "text": "Houder onder druk: kan openbarsten bij verhitting." },
-    { "code": "H230", "text": "Kan explosief reageren, zelfs in afwezigheid van lucht." },
-    { "code": "H231", "text": "Kan explosief reageren, zelfs in afwezigheid van lucht bij verhoogde druk en/of temperatuur." },
+    {
+      "code": "H229",
+      "text": "Houder onder druk: kan openbarsten bij verhitting."
+    },
+    {
+      "code": "H230",
+      "text": "Kan explosief reageren, zelfs in afwezigheid van lucht."
+    },
+    {
+      "code": "H231",
+      "text": "Kan explosief reageren, zelfs in afwezigheid van lucht bij verhoogde druk en/of temperatuur."
+    },
     { "code": "H240", "text": "Ontploffingsgevaar bij verwarming." },
     { "code": "H241", "text": "Brand- of ontploffingsgevaar bij verwarming." },
     { "code": "H242", "text": "Brandgevaar bij verwarming." },
-    { "code": "H250", "text": "Vat spontaan vlam bij blootstelling aan lucht." },
+    {
+      "code": "H250",
+      "text": "Vat spontaan vlam bij blootstelling aan lucht."
+    },
     { "code": "H251", "text": "Vatbaar voor zelfverhitting: kan vlam vatten." },
-    { "code": "H252", "text": "In contact met water komen ontvlambare gassen vrij die spontaan kunnen ontbranden." },
-    { "code": "H260", "text": "In contact met water komen ontvlambare gassen vrij." },
-    { "code": "H261", "text": "Kan brand veroorzaken of bevorderen; oxiderend." },
-    { "code": "H270", "text": "Kan brand of ontploffingen veroorzaken; sterk oxiderend." },
-    { "code": "H271", "text": "Kan brand bevorderen; oxiderend." },
-    { "code": "H272", "text": "Bevat gas onder druk; kan ontploffen bij verwarming." },
-    { "code": "H280", "text": "Bevat sterk gekoeld gas; kan cryogene brandwonden of letsel veroorzaken." },
-    { "code": "H281", "text": "Kan bijtend zijn voor metalen." },
-    { "code": "H290", "text": "Peut être corrosif pour les métaux." },
+    {
+      "code": "H252",
+      "text": "In contact met water komen ontvlambare gassen vrij die spontaan kunnen ontbranden."
+    },
+    {
+      "code": "H260",
+      "text": "In contact met water komen ontvlambare gassen vrij."
+    },
+    {
+      "code": "H261",
+      "text": "Kan brand veroorzaken of bevorderen; oxiderend."
+    },
+    {
+      "code": "H270",
+      "text": "Kan brand veroorzaken of bevorderen; oxiderend"
+    },
+    {
+      "code": "H271",
+      "text": "Kan brand of ontploffingen veroorzaken; sterk oxiderend"
+    },
+    { "code": "H272", "text": "Kan brand bevorderen; oxiderend" },
+    {
+      "code": "H280",
+      "text": "Bevat gas onder druk; kan ontploffen bij verwarming"
+    },
+    {
+      "code": "H281",
+      "text": "Bevat sterk gekoeld gas; kan cryogene brandwonden of letsel veroorzaken"
+    },
+    { "code": "H290", "text": "Kan bijtend zijn voor metalen." }
+  ],
+  "h-phrases-health-hazards": [
     { "code": "H300", "text": "Dodelijk bij inslikken." },
     { "code": "H301", "text": "Giftig bij inslikken." },
     { "code": "H302", "text": "Schadelijk bij inslikken." },
-    { "code": "H304", "text": "Kan dodelijk zijn als de stof bij inslikken in de luchtwegen terechtkomt." },
+    {
+      "code": "H304",
+      "text": "Kan dodelijk zijn als de stof bij inslikken in de luchtwegen terechtkomt."
+    },
     { "code": "H310", "text": "Dodelijk bij contact met de huid." },
     { "code": "H311", "text": "Giftig bij contact met de huid." },
     { "code": "H312", "text": "Schadelijk bij contact met de huid." },
@@ -156,99 +190,232 @@
     { "code": "H330", "text": "Dodelijk bij inademing." },
     { "code": "H331", "text": "Giftig bij inademing." },
     { "code": "H332", "text": "Schadelijk bij inademing." },
-    { "code": "H334", "text": "Kan bij inademing allergie- of astmasymptomen of ademhalingsmoeilijkheden veroorzaken." },
+    {
+      "code": "H334",
+      "text": "Kan bij inademing allergie- of astmasymptomen of ademhalingsmoeilijkheden veroorzaken."
+    },
     { "code": "H335", "text": "Kan irritatie van de luchtwegen veroorzaken." },
     { "code": "H336", "text": "Kan slaperigheid of duizeligheid veroorzaken." },
-    { "code": "H340", "text": "Kan genetische schade veroorzaken." },
-    { "code": "H341", "text": "Verdacht van het veroorzaken van genetische schade." },
-    { "code": "H350", "text": "Kan kanker veroorzaken." },
-    { "code": "H351", "text": "Verdacht van het veroorzaken van kanker." },
-    { "code": "H360", "text": "Kan de vruchtbaarheid of het ongeboren kind schaden." },
-    { "code": "H361", "text": "Kan mogelijks de vruchtbaarheid of het ongeboren kind schaden." },
-    { "code": "H362", "text": "Kan schadelijk zijn via de borstvoeding." },
-    { "code": "H370", "text": "Veroorzaakt schade aan organen." },
-    { "code": "H371", "text": "Kan schade aan organen veroorzaken." },
-    { "code": "H372", "text": "Veroorzaakt schade aan organen bij langdurige of herhaalde blootstelling." },
-    { "code": "H373", "text": "Kan schade aan organen veroorzaken bij langdurige of herhaalde blootstelling." },
-    { "code": "H300+H310", "text": "Dodelijk bij inslikken en bij contact met de huid." },
+    { "code": "H340", "text": "Kan genetische schade veroorzaken" },
+    {
+      "code": "H341",
+      "text": "Verdacht van het veroorzaken van genetische schade"
+    },
+    { "code": "H350", "text": "Kan kanker veroorzaken" },
+    { "code": "H351", "text": "Verdacht van het veroorzaken van kanker" },
+    {
+      "code": "H360",
+      "text": "Kan de vruchtbaarheid of het ongeboren kind schaden"
+    },
+    {
+      "code": "H361",
+      "text": "Kan mogelijk de vruchtbaarheid of het ongeboren kind schaden"
+    },
+    { "code": "H362", "text": "Kan schadelijk zijn via de borstvoeding" },
+    { "code": "H370", "text": "Veroorzaakt schade aan organen" },
+    { "code": "H371", "text": "Kan schade aan organen veroorzaken" },
+    {
+      "code": "H372",
+      "text": "Veroorzaakt schade aan organen (of alle betrokken organen vermelden indien bekend) bij langdurige of herhaalde blootstelling"
+    },
+    {
+      "code": "H373",
+      "text": "Kan schade aan organen veroorzaken bij langdurige of herhaalde blootstelling"
+    },
+    {
+      "code": "H300+H310",
+      "text": "Dodelijk bij inslikken en bij contact met de huid."
+    },
     { "code": "H300+H330", "text": "Dodelijk bij inslikken en bij inademing." },
-    { "code": "H310+H330", "text": "Dodelijk bij contact met de huid en bij inademing." },
-    { "code": "H300+H310+H330", "text": "Dodelijk bij inslikken, bij contact met de huid en bij inademing." },
-    { "code": "H301+H311", "text": "Giftig bij inslikken en bij contact met de huid." },
+    {
+      "code": "H310+H330",
+      "text": "Dodelijk bij contact met de huid en bij inademing."
+    },
+    {
+      "code": "H300+H310+H330",
+      "text": "Dodelijk bij inslikken, bij contact met de huid en bij inademing."
+    },
+    {
+      "code": "H301+H311",
+      "text": "Giftig bij inslikken en bij contact met de huid."
+    },
     { "code": "H301+H331", "text": "Giftig bij inslikken en bij inademing." },
-    { "code": "H311+H331", "text": "Giftig bij contact met de huid en bij inademing." },
-    { "code": "H301+H311+H331", "text": "Giftig bij inslikken, bij contact met de huid en bij inademing." },
-    { "code": "H302+H312", "text": "Schadelijk bij inslikken en bij contact met de huid." },
-    { "code": "H302+H332", "text": "Schadelijk bij inslikken en bij inademing." },
-    { "code": "H312+H332", "text": "Schadelijk bij contact met de huid en bij inademing." },
-    { "code": "H302+H312+H332", "text": "Schadelijk bij inslikken, bij contact met de huid en bij inademing." },
-    { "code": "H400", "text": "Zeer giftig voor in het water levende organismen." },
-    { "code": "H410", "text": "Zeer giftig voor in het water levende organismen, met langdurige gevolgen." },
-    { "code": "H411", "text": "Giftig voor in het water levende organismen, met langdurige gevolgen." },
-    { "code": "H412", "text": "Schadelijk voor in het water levende organismen, met langdurige gevolgen." },
-    { "code": "H413", "text": "Kan langdurige schadelijke gevolgen voor in het water levende organismen hebben." },
-    { "code": "H420", "text": "Schadelijk voor de volksgezondheid en het milieu door afbraak van ozon in de bovenste lagen van de atmosfeer." }
+    {
+      "code": "H311+H331",
+      "text": "Giftig bij contact met de huid en bij inademing."
+    },
+    {
+      "code": "H301+H311+H331",
+      "text": "Giftig bij inslikken, bij contact met de huid en bij inademing."
+    },
+    {
+      "code": "H302+H312",
+      "text": "Schadelijk bij inslikken en bij contact met de huid."
+    },
+    {
+      "code": "H302+H332",
+      "text": "Schadelijk bij inslikken en bij inademing."
+    },
+    {
+      "code": "H312+H332",
+      "text": "Schadelijk bij contact met de huid en bij inademing"
+    },
+    {
+      "code": "H302+H312+H332",
+      "text": "Schadelijk bij inslikken, bij contact met de huid en bij inademing."
+    }
+  ],
+  "h-phrases-environmental-hazards": [
+    {
+      "code": "H400",
+      "text": "Zeer giftig voor in het water levende organismen."
+    },
+    {
+      "code": "H410",
+      "text": "Zeer giftig voor in het water levende organismen, met langdurige gevolgen."
+    },
+    {
+      "code": "H411",
+      "text": "Giftig voor in het water levende organismen, met langdurige gevolgen."
+    },
+    {
+      "code": "H412",
+      "text": "Schadelijk voor in het water levende organismen, met langdurige gevolgen."
+    },
+    {
+      "code": "H413",
+      "text": "Kan langdurige schadelijk gevolgen voor in het water levende organismen hebben."
+    },
+    {
+      "code": "H420",
+      "text": "Schadelijk voor de volksgezondheid en het milieu door afbraak van ozon in de bovenste lagen van de atmosfeer (voorheen EUH059)."
+    }
   ],
   "h-phrases-color": [
     {
-      "bgColor": "rgb(242, 245, 255)",
-      "textColor": "red",
-      "itemsStart": "0",
-      "itemsEnd": "32"
-    },
-    {
-      "bgColor": "rgb(242, 245, 255)",
-      "textColor": "green",
-      "itemsStart": "33",
-      "itemsEnd": "73"
-    },
-    {
-      "bgColor": "rgb(242, 245, 255)",
-      "textColor": "blue",
-      "itemsStart": "74",
-      "itemsEnd": "100"
+      "bgColor": "rgb(212, 222, 255)",
+      "items": "all"
     }
   ],
-  "p-phrases": [
-    { "code": "P101", "text": "Bij het inwinnen van medisch advies, de verpakking of het etiket ter beschikking houden." },
+  "p-phrases-general": [
+    {
+      "code": "P101",
+      "text": "Bij het inwinnen van medisch advies, de verpakking of het etiket ter beschikking houden."
+    },
     { "code": "P102", "text": "Buiten het bereik van kinderen houden." },
-    { "code": "P103", "text": "Alvorens te gebruiken, het etiket lezen." },
-    { "code": "P201", "text": "Alvorens te gebruiken, de speciale aanwijzingen raadplegen." },
-    { "code": "P202", "text": "Pas gebruiken nadat u alle veiligheidsvoorschriften gelezen en begrepen heeft." },
-    { "code": "P210", "text": "Verwijderd houden van warmte/vonken/open vuur/hete oppervlakken. Niet roken." },
-    { "code": "P211", "text": "Niet in een open vuur of op andere ontstekingsbronnen spuiten." },
-    { "code": "P220", "text": "Van kleding/brandbare stoffen verwijderd houden/bewaren." },
-    { "code": "P221", "text": "Vermenging met brandbare stoffen absoluut vermijden." },
+    { "code": "P103", "text": "Alvorens te gebruiken, het etiket lezen." }
+  ],
+  "p-phrases-precautionary-measures-prevention": [
+    {
+      "code": "P201",
+      "text": "Alvorens te gebruiken, de speciale aanwijzingen raadplegen."
+    },
+    {
+      "code": "P202",
+      "text": "Pas gebruiken nadat u alle veiligheidsvoorschriften gelezen en begrepen heeft."
+    },
+    {
+      "code": "P210",
+      "text": "Verwijderd houden van warmte/vonken/open vuur/hete oppervlakken. - Niet roken."
+    },
+    {
+      "code": "P211",
+      "text": "Niet in een open vuur of op andere ontstekingsbronnen spuiten."
+    },
+    {
+      "code": "P220",
+      "text": "Van kleding/.../brandbare stoffen verwijderd houden/bewaren."
+    },
+    {
+      "code": "P221",
+      "text": "Vermenging met brandbare stoffen... absoluut vermijden."
+    },
     { "code": "P222", "text": "Contact met de lucht vermijden." },
-    { "code": "P223", "text": "Contact met water vermijden in verband met een heftige reactie en een mogelijke wolkbrand." },
-    { "code": "P230", "text": "Vochtig houden met ..." },
+    {
+      "code": "P223",
+      "text": "Contact met water vermijden in verband met een heftige reactie en een mogelijke wolkbrand."
+    },
+    { "code": "P230", "text": "Vochtig houden met..." },
     { "code": "P231", "text": "Onder inert gas werken." },
     { "code": "P232", "text": "Tegen vocht beschermen." },
     { "code": "P233", "text": "In goed gesloten verpakking bewaren." },
-    { "code": "P234", "text": "Uitsluitend in de oorspronkelijke verpakking bewaren." },
+    {
+      "code": "P234",
+      "text": "Uitsluitend in de oorspronkelijke verpakking bewaren."
+    },
     { "code": "P235", "text": "Koel bewaren." },
     { "code": "P240", "text": "Opslag- en opvangreservoir aarden." },
-    { "code": "P241", "text": "Explosieveilige elektrische/ventilatie-/verlichtingsapparatuur gebruiken." },
+    {
+      "code": "P241",
+      "text": "Explosieveilige elektrische/ventilatie-/verlichtings-/...apparatuur gebruiken."
+    },
     { "code": "P242", "text": "Uitsluitend vonkvrij gereedschap gebruiken." },
-    { "code": "P243", "text": "Voorzorgsmaatregelen treffen tegen ontladingen van statische elektriciteit." },
-    { "code": "P244", "text": "Reduceerventielen vrij van olie en vet houden." },
-    { "code": "P250", "text": "Malen/schokken/wrijving vermijden." },
-    { "code": "P251", "text": "Houder onder druk: ook na gebruik niet doorboren of verbranden." },
-    { "code": "P260", "text": "Stof/rook/gas/nevel/damp/spuitnevel niet inademen." },
-    { "code": "P261", "text": "Inademing van stof/rook/gas/nevel/damp/spuitnevel vermijden." },
-    { "code": "P262", "text": "Contact met de ogen, de huid of de kleding vermijden." },
-    { "code": "P263", "text": "Bij zwangerschap of borstvoeding aanraking vermijden." },
-    { "code": "P264", "text": "Na het werken met dit product grondig wassen." },
-    { "code": "P270", "text": "Niet eten, drinken of roken tijdens het gebruik van dit product." },
-    { "code": "P271", "text": "Alleen buiten of in een goed geventileerde ruimte gebruiken." },
-    { "code": "P272", "text": "Verontreinigde werkkleding mag de werkruimte niet verlaten." },
+    {
+      "code": "P243",
+      "text": "Voorzorgsmaatregelen treffen tegen ontladingen van statische elektriciteit."
+    },
+    {
+      "code": "P244",
+      "text": "Reduceerventielen vrij van olie en vet houden."
+    },
+    { "code": "P250", "text": "Malen/schokken/...wrijving vermijden." },
+    {
+      "code": "P251",
+      "text": "Houder onder druk: ook na gebruik niet doorboren of verbranden."
+    },
+    {
+      "code": "P260",
+      "text": "Stof/rook/gas/nevel/damp/spuitnevel niet inademen."
+    },
+    {
+      "code": "P261",
+      "text": "Inademing van stof/rook/gas/nevel/damp/spuitnevel vermijden."
+    },
+    {
+      "code": "P262",
+      "text": "Contact met de ogen, de huid of de kleding vermijden."
+    },
+    {
+      "code": "P263",
+      "text": "Bij zwangerschap of borstvoeding aanraking vermijden."
+    },
+    {
+      "code": "P264",
+      "text": "Na het werken met dit product ... grondig wassen."
+    },
+    {
+      "code": "P270",
+      "text": "Niet eten, drinken of roken tijdens het gebruik van dit product."
+    },
+    {
+      "code": "P271",
+      "text": "Alleen buiten of in een goed geventileerde ruimte gebruiken."
+    },
+    {
+      "code": "P272",
+      "text": "Verontreinigde werkkleding mag de werkruimte niet verlaten."
+    },
     { "code": "P273", "text": "Voorkom lozing in het milieu." },
-    { "code": "P280", "text": "Beschermende handschoenen/beschermende kleding/oogbescherming/gelaatsbescherming dragen." },
-    { "code": "P282", "text": "Koude-isolerende handschoenen/gelaatsbescherming/oogbescherming dragen." },
-    { "code": "P283", "text": "Vuur/vlambestendige/brandwerende kleding dragen." },
+    {
+      "code": "P280",
+      "text": "Beschermende handschoenen/beschermende kleding/oogbescherming/gelaatsbescherming dragen."
+    },
+    {
+      "code": "P282",
+      "text": "Koude-isolerende handschoenen/gelaatsbescherming/oogbescherming dragen."
+    },
+    {
+      "code": "P283",
+      "text": "Vuur/vlambestendige/brandwerende kleding dragen."
+    },
     { "code": "P284", "text": "Adembescherming dragen." },
-    { "code": "P231+P232", "text": "Onder inert gas werken. Tegen vocht beschermen." },
-    { "code": "P235+P410", "text": "Koel bewaren. Tegen zonlicht beschermen." },
+    {
+      "code": "P231+P232",
+      "text": "Onder inert gas werken. Tegen vocht beschermen."
+    },
+    { "code": "P235+P410", "text": "Koel bewaren. Tegen zonlicht beschermen." }
+  ],
+  "p-phrases-precautionary-measures-prevention-2": [
     { "code": "P301", "text": "NA INSLIKKEN:" },
     { "code": "P302", "text": "BIJ CONTACT MET DE HUID:" },
     { "code": "P303", "text": "BIJ CONTACT MET DE HUID (of het haar):" },
@@ -257,77 +424,248 @@
     { "code": "P306", "text": "NA MORSEN OP DE KLEDING:" },
     { "code": "P307", "text": "NA blootstelling:" },
     { "code": "P308", "text": "NA (mogelijke) blootstelling:" },
-    { "code": "P310", "text": "Onmiddellijk een ANTIGIFCENTRUM of een arts raadplegen." },
+    {
+      "code": "P310",
+      "text": "Onmiddellijk een ANTIGIFCENTRUM of een arts raadplegen."
+    },
     { "code": "P311", "text": "Een ANTIGIFCENTRUM of een arts raadplegen." },
-    { "code": "P312", "text": "Bij onwel voelen een ANTIGIFCENTRUM of een arts raadplegen." },
+    {
+      "code": "P312",
+      "text": "Bij onwel voelen een ANTIGIFCENTRUM of een arts raadplegen."
+    },
     { "code": "P313", "text": "Een arts raadplegen." },
     { "code": "P314", "text": "Bij onwel voelen een arts raadplegen." },
     { "code": "P315", "text": "Onmiddellijk een arts raadplegen." },
+    {
+      "code": "P320",
+      "text": "Specifieke behandeling dringend vereist (zie ... op dit etiket)."
+    },
+    {
+      "code": "P321",
+      "text": "Specifieke behandeling vereist (zie ... op dit etiket)."
+    },
+    {
+      "code": "P322",
+      "text": "Specifieke maatregelen (zie ... op dit etiket)."
+    },
     { "code": "P330", "text": "De mond spoelen." },
     { "code": "P331", "text": "GEEN braken opwekken." },
     { "code": "P332", "text": "Bij huidirritatie:" },
     { "code": "P333", "text": "Bij huidirritatie of uitslag:" },
-    { "code": "P334", "text": "In koud water onderdompelen/nat verband aanbrengen." },
+    {
+      "code": "P334",
+      "text": "In koud water onderdompelen/nat verband aanbrengen."
+    },
     { "code": "P335", "text": "Losse deeltjes van de huid afvegen." },
-    { "code": "P336", "text": "Bevroren lichaamsdelen met lauw water ontdooien. Niet wrijven." },
+    {
+      "code": "P336",
+      "text": "Bevroren lichaamsdelen met lauw water ontdooien. Niet wrijven op de betrokken plaatsen."
+    },
     { "code": "P337", "text": "Bij aanhoudende oogirritatie:" },
-    { "code": "P338", "text": "Contactlenzen verwijderen, indien mogelijk. Blijven spoelen." },
-    { "code": "P340", "text": "Het slachtoffer in de frisse lucht brengen en laten rusten in een houding die het ademen vergemakkelijkt." },
-    { "code": "P351", "text": "Voorzichtig afspoelen met water gedurende een aantal minuten." },
+    {
+      "code": "P338",
+      "text": "Contactlenzen verwijderen, indien mogelijk. Blijven spoelen."
+    },
+    {
+      "code": "P340",
+      "text": "Het slachtoffer in de frisse lucht brengen en laten rusten in een houding die het ademen vergemakkelijkt."
+    },
+    { "code": "P342", "text": "Bij ademhalingssymptomen:" },
+    {
+      "code": "P351",
+      "text": "Voorzichtig afspoelen met water gedurende een aantal minuten."
+    },
     { "code": "P352", "text": "Met veel water en zeep wassen." },
     { "code": "P353", "text": "Huid met water afspoelen/afdouchen." },
-    { "code": "P361", "text": "Verontreinigde kleding onmiddellijk uittrekken." },
-    { "code": "P362", "text": "Verontreinigde kleding uittrekken en wassen alvorens opnieuw te gebruiken." },
-    { "code": "P363", "text": "Verontreinigde kleding wassen alvorens opnieuw te gebruiken." },
+    {
+      "code": "P360",
+      "text": "Verontreinigde kleding en huid onmiddellijk met veel water afspoelen en pas daarna kleding uittrekken."
+    },
+    {
+      "code": "P361",
+      "text": "Verontreinigde kleding onmiddellijk uittrekken."
+    },
+    {
+      "code": "P362",
+      "text": "Verontreinigde kleding uittrekken en wassen alvorens deze opnieuw te gebruiken."
+    },
+    {
+      "code": "P363",
+      "text": "Verontreinigde kleding wassen alvorens deze opnieuw te gebruiken."
+    },
     { "code": "P370", "text": "In geval van brand:" },
+    {
+      "code": "P371",
+      "text": "In geval van grote brand en grote hoeveelheden:"
+    },
     { "code": "P372", "text": "Ontploffingsgevaar in geval van brand." },
-    { "code": "P373", "text": "NIET blussen wanneer het vuur de ontplofbare stoffen bereikt." },
-    { "code": "P375", "text": "Op afstand blussen omwille van ontploffingsgevaar." },
-    { "code": "P376", "text": "Het lek dichten als dat veilig gedaan kan worden." },
-    { "code": "P377", "text": "Brand door lekkend gas: niet blussen, tenzij het lek veilig gedicht kan worden." },
+    {
+      "code": "P373",
+      "text": "NIET blussen wanneer het vuur de ontplofbare stoffen bereikt."
+    },
+    {
+      "code": "P374",
+      "text": "Met normale voorzorgen vanaf een redelijke afstand blussen."
+    },
+    {
+      "code": "P375",
+      "text": "Op afstand blussen omwille van ontploffingsgevaar."
+    },
+    {
+      "code": "P376",
+      "text": "Het lek dichten als dat veilig gedaan kan worden."
+    },
+    {
+      "code": "P377",
+      "text": "Brand door lekkend gas: niet blussen, tenzij het lek veilig gedicht kan worden."
+    },
+    { "code": "P378", "text": "Blussen met..." },
     { "code": "P380", "text": "Evacueren." },
-    { "code": "P381", "text": "Alle ontstekingsbronnen wegnemen als dat veilig gedaan kan worden." },
-    { "code": "P390", "text": "Gelekte/gemorste stof opnemen om materiële schade te vermijden." },
+    {
+      "code": "P381",
+      "text": "Alle ontstekingsbronnen wegnemen als dat veilig gedaan kan worden."
+    },
+    {
+      "code": "P390",
+      "text": "Gelekte/gemorste stof opnemen om materiële schade te vermijden."
+    },
     { "code": "P391", "text": "Gelekte/gemorste stof opruimen." },
-    { "code": "P401", "text": "Opslaan volgens specifieke instructies." },
+    {
+      "code": "P301+P310",
+      "text": "NA INSLIKKEN: onmiddellijk een ANTIGIFCENTRUM of een arts raadplegen."
+    },
+    {
+      "code": "P301+P312",
+      "text": "NA INSLIKKEN: bij onwel voelen een ANTIGIFCENTRUM of een arts raadplegen."
+    },
+    {
+      "code": "P301+P330+P331",
+      "text": "NA INSLIKKEN: de mond spoelen -- GEEN braken opwekken."
+    },
+    {
+      "code": "P302+P334",
+      "text": "BIJ CONTACT MET DE HUID: in koud water onderdompelen/nat verband aanbrengen."
+    },
+    {
+      "code": "P302+P352",
+      "text": "BIJ CONTACT MET DE HUID: met veel water en zeep wassen."
+    },
+    {
+      "code": "P303+P361+P353",
+      "text": "BIJ CONTACT MET DE HUID (of het haar): verontreinigde kleding onmiddellijk uittrekken. Huid met water afspoelen/afdouchen."
+    },
+    {
+      "code": "P304+P340",
+      "text": "BIJ CONTACT MET DE HUID (of het haar): verontreinigde kleding onmiddellijk uittrekken - huid met water afspoelen/afdouchen."
+    },
+    {
+      "code": "P305+P351+P338",
+      "text": "NA INADEMING: het slachtoffer in de frisse lucht brengen en laten rusten in een houding die het ademen vergemakkelijkt."
+    },
+    {
+      "code": "P306+P360",
+      "text": "BIJ CONTACT MET DE OGEN: voorzichtig afspoelen met water gedurende een aantal minuten; contactlenzen verwijderen, indien mogelijk; blijven spoelen."
+    },
+    {
+      "code": "P307+P311",
+      "text": "NA MORSEN OP KLEDING: verontreinigde kleding en huid onmiddellijk met veel water afspoelen en pas daarna kleding uittrekken."
+    },
+    {
+      "code": "P308+P313",
+      "text": "NA blootstelling: een ANTIGIFCENTRUM of een arts raadplegen."
+    },
+    {
+      "code": "P332+P313",
+      "text": "NA (mogelijke) blootstelling: een arts raadplegen."
+    },
+    { "code": "P333+P313", "text": "Bij huidirritatie: een arts raadplegen." },
+    {
+      "code": "P335+P334",
+      "text": "Bij huidirritatie of uitslag: een arts raadplegen."
+    },
+    {
+      "code": "P337+P313",
+      "text": "Losse deeltjes van de huid afvegen. In koud water onderdompelen/nat verband aanbrengen."
+    },
+    {
+      "code": "P342+P311",
+      "text": "Bij aanhoudende oogirritatie: een arts raadplegen."
+    },
+    {
+      "code": "P361+P364",
+      "text": "Verontreinigde kleding onmiddellijk uittrekken en wassen alvorens deze opnieuw te gebruiken."
+    },
+    {
+      "code": "P362+P364",
+      "text": "Verontreinigde kleding uittrekken en wassen alvorens deze opnieuw te gebruiken."
+    },
+    {
+      "code": "P370+P376",
+      "text": "In geval van brand: het lek dichten als dat veilig gedaan kan worden."
+    },
+    { "code": "P370+P378", "text": "In geval van brand: blussen met..." },
+    { "code": "P370+P380", "text": "In geval van brand: evacueren." },
+    {
+      "code": "P370+P380+P375",
+      "text": "In geval van brand: evacueren. Op afstand blussen omwille van ontploffingsgevaar."
+    },
+    {
+      "code": "P371+P380+P375",
+      "text": "In geval van grote brand en grote hoeveelheden: evacueren. Op afstand blussen omwille van ontploffingsgevaar."
+    }
+  ],
+  "p-phrases-precautionary-measures-storage": [
+    { "code": "P401", "text": "... bewaren." },
     { "code": "P402", "text": "Op een droge plaats bewaren." },
     { "code": "P403", "text": "Op een goed geventileerde plaats bewaren." },
     { "code": "P404", "text": "In gesloten verpakking bewaren." },
     { "code": "P405", "text": "Achter slot bewaren." },
+    {
+      "code": "P406",
+      "text": "In corrosiebestendige/... houder met corrosiebestendige binnenbekleding bewaren."
+    },
+    { "code": "P407", "text": "Ruimte laten tussen stapels/pallets." },
     { "code": "P410", "text": "Tegen zonlicht beschermen." },
-    { "code": "P412", "text": "Niet blootstellen aan temperaturen boven 50°C/122°F." },
-    { "code": "P501", "text": "Inhoud/verpakking afvoeren naar een erkend afvalverwerkingsbedrijf." }
+    { "code": "P411", "text": "Bij maximaal ... °C/... °F bewaren." },
+    {
+      "code": "P412",
+      "text": "Niet blootstellen aan temperaturen boven 50°C/122°F."
+    },
+    {
+      "code": "P413",
+      "text": "Bulkmateriaal, indien meer dan ... kg/... lbs, bij temperaturen van maximaal ...°C/...°F bewaren."
+    },
+    { "code": "P420", "text": "Gescheiden van ander materiaal bewaren." },
+    { "code": "P422", "text": "Onder ... bewaren." },
+    {
+      "code": "P402+P404",
+      "text": "Op een droge plaats bewaren. In gesloten verpakking bewaren."
+    },
+    {
+      "code": "P403+P233",
+      "text": "Op een goed geventileerde plaats bewaren. In goed gesloten verpakking bewaren."
+    },
+    {
+      "code": "P403+P235",
+      "text": "Op een goed geventileerde plaats bewaren. Koel bewaren."
+    },
+    {
+      "code": "P410+P403",
+      "text": "Tegen zonlicht beschermen. Op een goed geventileerde plaats bewaren."
+    },
+    {
+      "code": "P410+P412",
+      "text": "Tegen zonlicht beschermen. Niet blootstellen aan temperaturen boven 50°C/122°F."
+    },
+    {
+      "code": "P411+P235",
+      "text": "Bij maximaal ... °C/... °F bewaren. Koel bewaren."
+    }
   ],
   "p-phrases-color": [
     {
-      "bgColor": "rgb(242, 245, 255)",
-      "textColor": "red",
-      "itemsStart": "0",
-      "itemsEnd": "2"
-    },
-    {
-      "bgColor": "rgb(242, 245, 255)",
-      "textColor": "green",
-      "itemsStart": "3",
-      "itemsEnd": "38"
-    },
-    {
-      "bgColor": "rgb(242, 245, 255)",
-      "textColor": "blue",
-      "itemsStart": "39",
-      "itemsEnd": "78"
-    },
-    {
-      "bgColor": "rgb(242, 245, 255)",
-      "textColor": "orange",
-      "itemsStart": "79",
-      "itemsEnd": "85"
-    },
-    {
-      "bgColor": "rgb(242, 245, 255)",
-      "textColor": "purple",
-      "itemsStart": "86",
-      "itemsEnd": "100"
+      "bgColor": "rgb(212, 222, 255)",
+      "items": "all"
     }
   ]
 }

@@ -1,6 +1,9 @@
 /* ============================= */
 /*        Global Styles          */
 /* ============================= */
+#COLORPICKER {
+  color: rgb(255, 223, 223);
+}
 * {
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -17,7 +20,8 @@ body {
 .to-do-list-container {
   padding: 1rem;
 }
-.to-do-list, .to-do{
+.to-do-list,
+.to-do {
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   padding: 1rem;
@@ -158,6 +162,8 @@ body {
   gap: 1rem;
 }
 .chemical-form {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 .field {
@@ -207,7 +213,8 @@ select.field-input {
 }
 
 .multi-select-icon img {
-  width: 8rem;
+  width: 100%;
+  max-width: 8rem;
 }
 
 .multi-select-icon:hover {
@@ -234,7 +241,8 @@ select.field-input {
   scroll-behavior: smooth;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 25rem;
+  height: auto;
+  max-height: 20rem;
 }
 
 .multi-select-list-item {
@@ -371,7 +379,7 @@ select.field-input {
   align-items: center;
   justify-content: center;
 }
-.chemical-category img{
+.chemical-category img {
   width: 2rem;
 }
 

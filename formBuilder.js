@@ -17,13 +17,15 @@ function BuildForm() {
         fieldContainer.appendChild(fieldLabel);
 
         let fieldObj;
+        let fieldId = field.id;
+        if (field.idEnd) {
+          fieldId = field.id + "-" + field.idEnd;
+        }
 
         switch (field.type) {
           case "input":
             fieldObj = document.createElement("input");
             fieldObj.type = field.input;
-            fieldObj.id = field.id;
-            fieldObj.required = field.required;
             if (field.placeholder) fieldObj.placeholder = field.placeholder;
             if (field.input !== "file") fieldObj.className = "field-input";
             fieldContainer.appendChild(fieldObj);
@@ -31,7 +33,6 @@ function BuildForm() {
 
           case "select":
             fieldObj = document.createElement("select");
-            fieldObj.id = field.id;
             fieldObj.className = "field-input";
             fieldContainer.appendChild(fieldObj);
             break;
@@ -41,7 +42,6 @@ function BuildForm() {
             selectedItems.className = "multi-select-selected-items";
 
             fieldObj = document.createElement("div");
-            fieldObj.id = field.id;
             fieldObj.className =
               field.select === "grid"
                 ? "multi-select-grid"
@@ -54,7 +54,7 @@ function BuildForm() {
             fetch("./data/formData.json")
               .then((resData) => resData.json())
               .then((formData) => {
-                const symbols = formData[field.id];
+                const symbols = formData[fieldId];
                 const colors = formData[field.id + "-color"];
                 symbols?.forEach((element) => {
                   const label = document.createElement("label");
@@ -65,16 +65,18 @@ function BuildForm() {
                       if (!selectedCodes.includes(element.code)) {
                         selectedCodes.push(element.code);
                       }
-                      colors.forEach((color) => {
-                        if (
-                          color.items === "all" ||
-                          (symbols.indexOf(element) >= color.itemsStart &&
-                            symbols.indexOf(element) <= color.itemsEnd)
-                        ) {
-                          label.style.backgroundColor = color.bgColor;
-                          label.style.borderColor = color.borderColor;
-                        }
-                      });
+                      if (colors) {
+                        colors.forEach((color) => {
+                          if (
+                            color.items === "all" ||
+                            (symbols.indexOf(element) >= color.itemsStart &&
+                              symbols.indexOf(element) <= color.itemsEnd)
+                          ) {
+                            label.style.backgroundColor = color.bgColor;
+                            label.style.borderColor = color.borderColor;
+                          }
+                        });
+                      }
                     } else {
                       const index = selectedCodes.indexOf(element.code);
                       if (index > -1) selectedCodes.splice(index, 1);
@@ -102,15 +104,17 @@ function BuildForm() {
                     label.className = "multi-select-list-item";
                     label.id = element.code;
                     const itemText = document.createElement("p");
-                    colors.forEach((color) => {
-                      if (
-                        color.items === "all" ||
-                        (symbols.indexOf(element) >= color.itemsStart &&
-                          symbols.indexOf(element) <= color.itemsEnd)
-                      ) {
-                        itemText.style.color = color.textColor;
-                      }
-                    });
+                    if (colors) {
+                      colors.forEach((color) => {
+                        if (
+                          color.items === "all" ||
+                          (symbols.indexOf(element) >= color.itemsStart &&
+                            symbols.indexOf(element) <= color.itemsEnd)
+                        ) {
+                          itemText.style.color = color.textColor;
+                        }
+                      });
+                    }
                     itemText.textContent = `${element.code} - ${element.text}`;
                     label.appendChild(itemText);
                   }
@@ -126,12 +130,12 @@ function BuildForm() {
 
           case "textarea":
             fieldObj = document.createElement("textarea");
-            fieldObj.id = field.id;
             fieldObj.className = "field-area";
-            fieldObj.required = field.required;
             fieldContainer.appendChild(fieldObj);
             break;
         }
+        fieldObj.id = fieldId;
+        fieldObj.required = field.required;
       });
 
       const bottemNav = document.createElement("div");

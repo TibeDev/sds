@@ -1,11 +1,4 @@
 {
-  "layout": [
-    {
-      "count-of-items": 6,
-      "layout": "grid",
-      "grid-layout": "auto auto"
-    }
-  ],
   "fields": [
     {
       "id": "collection-name",
@@ -18,7 +11,7 @@
     },
     {
       "id": "commercial-name",
-      "label": "Commerciele Naam",
+      "label": "Commerciele naam",
       "type": "input",
       "input": "text",
       "placeholder": "Merknaam (bv: Sprite, Fanta, Nespresso, etc...)",
@@ -80,7 +73,7 @@
       "label": "PBM's",
       "type": "multi-select",
       "select": "grid",
-      "collumn": "auto auto auto",
+      "collumn": "auto auto auto auto auto auto auto",
       "required": true,
       "chemicalDataType": "category",
       "maxCategoryItems": 3
@@ -94,14 +87,56 @@
     },
     {
       "id": "h-phrases",
-      "label": "H-zinnen",
+      "idEnd": "physical-hazards",
+      "label": "H-zinnen fysische gevaren",
+      "type": "multi-select",
+      "select": "list",
+      "required": true
+    },
+    {
+      "id": "h-phrases",
+      "idEnd": "health-hazards",
+      "label": "H-zinnen gezondheids gevaren",
+      "type": "multi-select",
+      "select": "list",
+      "required": true
+    },
+    {
+      "id": "h-phrases",
+      "idEnd": "environmental-hazards",
+      "label": "H-zinnen milieu gevaren",
       "type": "multi-select",
       "select": "list",
       "required": true
     },
     {
       "id": "p-phrases",
-      "label": "P-zinnen",
+      "idEnd": "general",
+      "label": "P-zinnen algemeen",
+      "type": "multi-select",
+      "select": "list",
+      "required": true
+    },
+    {
+      "id": "p-phrases",
+      "idEnd": "precautionary-measures-prevention",
+      "label": "P-zinnen voorzorgsmaatregelen in verband met preventie",
+      "type": "multi-select",
+      "select": "list",
+      "required": true
+    },
+    {
+      "id": "p-phrases",
+      "idEnd": "precautionary-measures-prevention-2",
+      "label": "P-zinnen voorzorgsmaatregelen in verband met preventie 2",
+      "type": "multi-select",
+      "select": "list",
+      "required": true
+    },
+    {
+      "id": "p-phrases",
+      "idEnd": "precautionary-measures-storage",
+      "label": "P-zinnen voorzorgsmaatregelen in verband met opslag",
       "type": "multi-select",
       "select": "list",
       "required": true
@@ -180,14 +215,6 @@
       "id": "extra-info",
       "label": "Extra info",
       "type": "textarea",
-      "required": true
-    },
-    {
-      "id": "title",
-      "label": "Titel",
-      "type": "input",
-      "input": "text",
-      "placeholder": "bv: Aceton, PUR-schuim, Silicone, etc...",
       "required": true
     },
     {
