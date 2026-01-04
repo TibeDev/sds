@@ -299,8 +299,9 @@ select.field-input {
   width: 100%;
   border: none;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
   transition: 0.15s;
 }
 .chemical:not(:last-child) {
@@ -308,12 +309,6 @@ select.field-input {
 }
 .chemical:hover {
   background-color: rgb(240, 240, 240);
-}
-
-.chemical-info {
-  display: grid;
-  grid-template-columns: auto auto;
-  width: 100%;
 }
 
 .chemical-buttons {
@@ -353,21 +348,23 @@ select.field-input {
   margin-bottom: 0px;
 }
 
-.chemical-cas {
-  margin-top: 0px;
+.chemical-sub-title {
+  margin: 0;
+  margin-top: 0.2rem;
   color: rgb(119, 119, 119);
 }
 
 /* ============================= */
 /*      Hazard Categories        */
 /* ============================= */
-.hazard-category-list {
+.chemical-category-list {
   display: flex;
   gap: 0.25rem;
+  margin-top: 1rem;
 }
 
-.hazard-category,
-.hazard-category-extra {
+.chemical-category,
+.chemical-category-extra {
   padding: 0.3rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -377,12 +374,15 @@ select.field-input {
   justify-content: center;
 }
 
-.hazard-category {
+.chemical-category {
   background-color: rgb(255, 227, 227);
   color: rgb(215, 0, 0);
 }
+.chemical-category img{
+  width: 2rem;
+}
 
-.hazard-category-extra {
+.chemical-category-extra {
   background-color: rgb(237, 237, 237);
 }
 /* ============================= */

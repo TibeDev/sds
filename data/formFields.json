@@ -13,7 +13,8 @@
       "type": "input",
       "input": "text",
       "placeholder": "bv: Aceton, PUR-schuim, Silicone, etc...",
-      "required": true
+      "required": true,
+      "chemicalDataType": "title"
     },
     {
       "id": "commercial-name",

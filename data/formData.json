@@ -53,6 +53,11 @@
       "items": "all"
     }
   ],
+  "ghs-symbols-category": [
+    {
+      "bgColor": "rgb(255, 242, 242)"
+    }
+  ],
   "pbms": [
     {
       "img": "oogbescherming.png",
