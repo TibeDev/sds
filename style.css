@@ -17,7 +17,7 @@ body {
 .to-do-list-container {
   padding: 1rem;
 }
-.to-do-list {
+.to-do-list, .to-do{
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   padding: 1rem;
@@ -126,6 +126,8 @@ body {
   padding-right: 20px;
   padding-bottom: 20px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-nav {
@@ -155,7 +157,12 @@ body {
   grid-template-columns: auto auto;
   gap: 1rem;
 }
-
+.chemical-form {
+  width: 100%;
+}
+.field {
+  width: 100%;
+}
 .basic-field .field-label {
   margin: 0;
 }

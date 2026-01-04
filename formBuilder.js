@@ -55,25 +55,37 @@ function BuildForm() {
               .then((resData) => resData.json())
               .then((formData) => {
                 const symbols = formData[field.id];
+                const colors = formData[field.id + "-color"];
                 symbols?.forEach((element) => {
                   const label = document.createElement("label");
                   const input = document.createElement("input");
                   input.type = "checkbox";
                   input.addEventListener("change", () => {
                     if (input.checked) {
-                      selectedCodes.push(element.code + " /");
-                      label.style.backgroundColor = field.selectedBgColor;
-                      label.style.borderColor = field.selectedBorderColor;
+                      if (!selectedCodes.includes(element.code)) {
+                        selectedCodes.push(element.code);
+                      }
+                      colors.forEach((color) => {
+                        if (
+                          color.items === "all" ||
+                          (symbols.indexOf(element) >= color.itemsStart &&
+                            symbols.indexOf(element) <= color.itemsEnd)
+                        ) {
+                          label.style.backgroundColor = color.selectedBgColor;
+                          label.style.borderColor = color.selectedBorderColor;
+                        }
+                      });
                     } else {
                       const index = selectedCodes.indexOf(element.code);
                       if (index > -1) selectedCodes.splice(index, 1);
                       label.style.backgroundColor = "";
                       label.style.borderColor = "";
                     }
+
                     selectedItems.textContent =
                       selectedCodes.length > 0
-                        ? "Selected items: " + selectedCodes.join(" ")
-                        : " ";
+                        ? "Selected items: " + selectedCodes.join(" / ")
+                        : "";
                   });
 
                   label.appendChild(input);
@@ -90,6 +102,15 @@ function BuildForm() {
                     label.className = "multi-select-list-item";
                     label.id = element.code;
                     const itemText = document.createElement("p");
+                    colors.forEach((color) => {
+                      if (
+                        color.items === "all" ||
+                        (symbols.indexOf(element) >= color.itemsStart &&
+                          symbols.indexOf(element) <= color.itemsEnd)
+                      ) {
+                        itemText.style.color = color.textColor;
+                      }
+                    });
                     itemText.textContent = `${element.code} - ${element.text}`;
                     label.appendChild(itemText);
                   }

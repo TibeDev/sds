@@ -1,4 +1,11 @@
 {
+  "layout": [
+    {
+      "count-of-items": 6,
+      "layout": "grid",
+      "grid-layout": "auto auto"
+    }
+  ],
   "fields": [
     {
       "id": "collection-name",
@@ -63,8 +70,6 @@
       "type": "multi-select",
       "select": "grid",
       "collumn": "auto auto auto",
-      "selectedBgColor": "rgb(255, 242, 242)",
-      "selectedBorderColor": "red",
       "required": true
     },
     {
@@ -73,16 +78,12 @@
       "type": "multi-select",
       "select": "grid",
       "collumn": "auto auto auto",
-      "selectedBgColor": "rgb(242, 245, 255)",
-      "selectedBorderColor": "rgb(22, 54, 135)",
       "required": true
     },
     {
       "id": "pbm-norms",
       "label": "PBM-Normen",
       "type": "multi-select",
-      "selectedBgColor": "rgb(242, 245, 255)",
-      "selectedBorderColor": "rgb(22, 54, 135)",
       "select": "list",
       "required": true
     },
