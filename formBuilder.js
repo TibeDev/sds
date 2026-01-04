@@ -84,7 +84,7 @@ function BuildForm() {
                     label.id = element.name;
 
                     const img = document.createElement("img");
-                    img.src = `../images/${field.id}/${element.img}`;
+                    img.src = `./images/${field.id}/${element.img}`;
                     label.appendChild(img);
                   } else {
                     label.className = "multi-select-list-item";
