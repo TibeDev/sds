@@ -135,13 +135,14 @@ function BuildForm() {
             break;
         }
         fieldObj.id = fieldId;
+        fieldContainer.id = field.type;
         fieldObj.required = field.required;
       });
 
       const bottemNav = document.createElement("div");
       bottemNav.className = "bottemNav";
       bottemNav.innerHTML = `
-        <button type="submit" onclick="AddChemical()" id="add-chemical">Add Chemical</button>
+        <button onclick="AddChemical()" id="add-chemical">Add Chemical</button>
         <button onclick="CancelChemical()" type="button" id="cancel-form">Cancel</button>
       `;
       formContainer.appendChild(bottemNav);

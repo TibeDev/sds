@@ -337,13 +337,14 @@ select.field-input {
   height: 2rem;
 }
 
-.chemical button img {
+.chemical-edit-btn img,
+.chemical-delete-btn img {
   width: 100%;
   filter: brightness(0);
   transition: 0.15s;
 }
 
-.chemical button:hover img {
+.chemical-edit-btn:hover img {
   filter: brightness(0.25);
 }
 
