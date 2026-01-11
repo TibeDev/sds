@@ -2,9 +2,72 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="sdsViewer.css" />
+    <link rel="stylesheet" href="navMenu.css" />
   </head>
   <body>
+    <div class="nav-menu">
+      <a href="formBuilder.html">SDS Maker</a>
+      <a href="logIn.html">Log in page</a>
+      <a href="signIn.html">Sign in page</a>
+      <a href="toDo.html">To Do List</a>
+    </div>
     <div class="viewer-container">
+      <div class="side-bar">
+        <div class="side-bar-nav">
+          <p class="side-bar-nav-title">Filters:</p>
+          <label class="close-side-bar-btn">
+            <img src="images/Icons/Arrow.svg" alt="" />
+            <input type="checkbox" />
+          </label>
+        </div>
+        <div class="filter-list">
+          <div class="filter">
+            <p class="filter-label">Filter Input text field:</p>
+            <input class="filter-input" type="text" />
+          </div>
+          <div class="filter">
+            <p class="filter-label">Filter Multiple choice:</p>
+            <div class="filter-multi-choice-list">
+              <label class="mutli-choice-list-item">
+                <input type="checkbox" />
+                <p>appel</p>
+              </label>
+              <label class="mutli-choice-list-item">
+                <input type="checkbox" />
+                <p>Peer</p>
+              </label>
+              <label class="mutli-choice-list-item">
+                <input type="checkbox" />
+                <p>Meloen</p>
+              </label>
+              <label class="mutli-choice-list-item">
+                <input type="checkbox" />
+                <p>appel</p>
+              </label>
+              <label class="mutli-choice-list-item">
+                <input type="checkbox" />
+                <p>Peer</p>
+              </label>
+              <label class="mutli-choice-list-item">
+                <input type="checkbox" />
+                <p>Meloen</p>
+              </label>
+              <label class="mutli-choice-list-item">
+                <input type="checkbox" />
+                <p>appel</p>
+              </label>
+              <label class="mutli-choice-list-item">
+                <input type="checkbox" />
+                <p>Peer</p>
+              </label>
+              <label class="mutli-choice-list-item">
+                <input type="checkbox" />
+                <p>Meloen</p>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="item-grid"></div>
     </div>
   </body>

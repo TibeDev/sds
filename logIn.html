@@ -2,27 +2,39 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="logIn.css" />
+    <link rel="stylesheet" href="navMenu.css" />
   </head>
   <body>
-    <div class="left-card card"></div>
-    <div class="right-card card">
-      <div class="log-in-container">
-        <form action="" class="log-in-form">
-          <div class="input-field">
-            <label for="email">Email</label> <input type="text" name="email" />
-          </div>
+    <div class="nav-menu">
+      <a href="formBuilder.html">SDS Maker</a>
+      <a href="signIn.html">Sign in page</a>
+      <a href="sdsViewer.html">SDS Viewer page</a>
+      <a href="toDo.html">To Do List</a>
+    </div>
+    <div class="log-in-page-container">
+      <div class="left-card card"></div>
+      <div class="right-card card">
+        <div class="log-in-container">
+          <form action="" class="log-in-form">
+            <div class="input-field">
+              <label for="email">Email</label>
+              <input type="text" name="email" />
+            </div>
 
-          <div class="input-field">
-            <label for="password">Password</label>
-            <input type="text" name="password" />
-            <a href="">Forgot password?</a>
-          </div>
-          <div class="log-in-questions">
-            <label> <input type="checkbox" name="remember" />Remember me</label>
-          </div>
-          <button class="sign-in-btn">Log In</button>
-        </form>
-        <p>Don't have an account? <a href="signIn.html">Sign In</a></p>
+            <div class="input-field">
+              <label for="password">Password</label>
+              <input type="text" name="password" />
+              <a href="">Forgot password?</a>
+            </div>
+            <div class="log-in-questions">
+              <label>
+                <input type="checkbox" name="remember" />Remember me</label
+              >
+            </div>
+            <button class="sign-in-btn">Log In</button>
+          </form>
+          <p>Don't have an account? <a href="signIn.html">Sign In</a></p>
+        </div>
       </div>
     </div>
   </body>

@@ -17,15 +17,6 @@ body {
 /* ============================= */
 /*           Layout              */
 /* ============================= */
-.to-do-list-container {
-  padding: 1rem;
-}
-.to-do-list,
-.to-do {
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 1rem;
-}
 .container {
   display: grid;
   grid-template-columns: 30% auto;
@@ -246,7 +237,7 @@ select.field-input {
 }
 
 .multi-select-list-item {
-  display: grid;
+  display: flex;
   padding-left: 1rem;
   transition: 0.15s;
   align-items: center;

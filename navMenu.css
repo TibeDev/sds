@@ -1,0 +1,18 @@
+.nav-menu,
+.nav-menu a {
+  padding: 1rem;
+}
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+}
+.nav-menu a {
+  text-decoration: none;
+  border-radius: 12px;
+  color: white;
+  background: #e60000;
+  font-weight: 600;
+}
+.nav-menu a:hover {
+  background: #cc0000;
+}

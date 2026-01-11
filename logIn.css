@@ -1,12 +1,15 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+}
+.log-in-page-container {
   display: grid;
   grid-template-columns: 50% 50%;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  padding: 0px;
-  margin: 0px;
+  height: 100%;
 }
 .left-card {
   background-color: blue;
